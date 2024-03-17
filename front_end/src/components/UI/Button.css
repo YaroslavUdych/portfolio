@@ -1,0 +1,58 @@
+.button-elem {
+	opacity: 0;
+	transform: translateY(20px);
+}
+.button {
+	position: relative;
+	font-family: 'Roboto Mono', monospace;
+	background-color: transparent;
+	color: var(--text-color);
+	padding: 8px 16px;
+	border: 1px solid var(--text-color);
+	cursor: pointer;
+	font-size: 1rem;
+	text-transform: uppercase;
+	width: 180px;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+
+.button::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 0;
+	background-color: var(--secondary-color);
+	transition: all 0.3s ease;
+	z-index: -1;
+	transform: translate(-50%, -50%);
+}
+
+.button:hover {
+	color: var(--bg-color);
+	border-color: var(--secondary-color);
+}
+.button:active {
+	transform: scale(0.9);
+}
+
+.button:hover::before,
+.button:active::before {
+	height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	.button-elem {
+		align-self: center;
+	}
+}
+@media screen and (max-width: 480px) {
+	.button {
+		width: 100%;
+	}
+	.button-elem {
+		width: 100%;
+	}
+}

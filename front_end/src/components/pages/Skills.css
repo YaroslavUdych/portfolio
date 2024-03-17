@@ -1,0 +1,131 @@
+.skills-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	gap: 10px;
+}
+.skills-wrapper p {
+	margin: 0;
+}
+
+.skills-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	font-family: Roboto Mono, Verdana, sans-serif;
+	height: 100%;
+	color: var(--secondary-color);
+	font-size: clamp(1.4rem, 2vw, 1.6rem);
+	flex: 1 1 40%;
+}
+.skills-list ul {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0;
+	gap: 30px;
+}
+.skills-list ul li {
+	opacity: 0;
+	transform: translateY(20px);
+}
+/* ----------------- */
+.skills-courses {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	text-align: left;
+	gap: 40px;
+	flex: 1 1 60%;
+}
+.skills-title {
+	font-size: 1.3rem;
+	line-height: 25px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: left;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.skills-courses-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+	font-family: Roboto Mono, Verdana sans-serif;
+}
+.skills-courses-list-item {
+	opacity: 0;
+	transform: translateY(20px);
+}
+.skills-courses-list-item__title {
+	font-size: 1.1rem;
+}
+.skills-courses-list-item-body {
+	display: flex;
+	width: 100%;
+	gap: 10px;
+	font-size: 1rem;
+	font-family: 'Montserrat', sans-serif;
+}
+.skills-courses-list-item__certeficate {
+	align-self: flex-end;
+	font-size: clamp(0.9rem, 1vw, 1rem);
+	font-family: Roboto Mono, Verdana, sans-serif;
+	text-decoration: none;
+	position: relative;
+}
+.skills-courses-list-item__certeficate::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1px;
+	background-color: var(--secondary-color);
+	bottom: -1px;
+	width: 0;
+	opacity: 0;
+	transition: all 0.2s ease-out;
+}
+.skills-courses-list-item__certeficate:hover {
+	color: var(--secondary-color);
+}
+.skills-courses-list-item__certeficate:hover::before {
+	opacity: 1;
+	width: 100%;
+}
+.skills-courses-list-item__certeficate:visited {
+	color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+	.skills-wrapper {
+		margin-top: 20px;
+		flex-direction: column;
+		gap: 20px;
+	}
+	.skills-courses-list {
+		gap: 10px;
+	}
+	.skills-list {
+		align-items: flex-start;
+		flex: 1 1 100%;
+		width: 100%;
+	}
+	.skills-list ul {
+		gap: 10px;
+	}
+}

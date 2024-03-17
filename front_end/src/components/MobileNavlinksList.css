@@ -1,0 +1,42 @@
+.mobile-navlinks-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: scale(0.8);
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	background-color: var(--bg-color);
+	z-index: 11;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.1s ease;
+	padding-top: 150px;
+}
+
+.mobile-navlinks-list .navlinks-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+.mobile-menu-visible {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.mobile-navlinks-list .active.navlink::before,
+.mobile-navlinks-list .active.navlink::after {
+	opacity: 1;
+}
+
+.mobile-navlinks-list .active.navlink {
+	margin-left: 0;
+}
