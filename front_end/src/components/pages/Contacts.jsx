@@ -58,7 +58,7 @@ const Contacts = function () {
 		setLoading(true)
 		setButtonText('Sending...')
 
-		fetch('https://webdevelop.cz/send-email', {
+		fetch('/send-email', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
